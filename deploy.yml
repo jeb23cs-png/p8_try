@@ -1,0 +1,9 @@
+---
+- name: Deploy Artifact to Localhost
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Copy artifact
+      copy:
+        src: "/var/lib/jenkins/workspace/p8_try/target/my-app-1.0-SNAPSHOT.jar"
+        dest: "/tmp/t.jar"
